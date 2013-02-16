@@ -4,4 +4,72 @@
 @import "susy";
 @import "font-awesome";
 @import "sassy-buttons";
-// start layout
+
+// Start Susy Grid -------------------------------------------
+
+$total-columns  : 12;             // a 12-column grid
+$column-width   : 4em;            // each column is 4em wide
+$gutter-width   : 1em;            // 1em gutters between columns
+$grid-padding   : $gutter-width;  // grid-padding equal to gutter
+$break: 12;
+$media-layout: 60em; // 16px*60em = 960px
+
+// ----------------------------------------------
+body {
+	font-size: 16px;
+	font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+}
+h1 {font-size: 2em}
+
+.pagenav {
+	ul {
+		margin-top: .5em;
+		float: right;
+		li {
+		display: inline;
+		padding: 1em;
+			a {
+			text-decoration: none;
+			}
+		} //end li
+	}// end ul
+}// end .pagenav 
+
+footer { 
+	padding:1em;
+	background-color: lightgrey;
+}
+
+
+
+// Container
+
+.page {
+	@include container($total-columns, $break);
+}
+
+// Layout
+
+@include at-breakpoint($break) {
+	header {clear: both;}
+	.logo{@include span-columns(2,$break);}
+	.pagenav { @include span-columns(10 omega,$break); }
+	.banner { @include span-columns(12 omega,$break); }
+	.main {
+		$main-columns: 12;
+		@include span-columns($main-columns omega, $break);
+		.content { @include span-columns(12 omega,$main-columns) }
+		.summary { @include span-columns(3 omega, $main-columns) }
+	}
+	footer{clear: both;}
+}
+
+.contentinfo {
+	clear: both;
+	margin: 0 0 - $grid-padding;
+	padding: 0 $grid-padding;
+	@include at-breakpoint($break) {
+		margin: 0;
+		@include pad(2,3,$break);
+	}
+}

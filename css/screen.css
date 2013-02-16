@@ -1287,3 +1287,102 @@ ul.icons {
 /* line 499, ../sass/font-awesome.scss */
 .icon-folder-open-alt:before {
   content: "\f115"; }
+
+/* line 18, ../sass/screen.scss */
+body {
+  font-size: 16px;
+  font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif; }
+
+/* line 22, ../sass/screen.scss */
+h1 {
+  font-size: 2em; }
+
+/* line 25, ../sass/screen.scss */
+.pagenav ul {
+  margin-top: .5em;
+  float: right; }
+  /* line 28, ../sass/screen.scss */
+  .pagenav ul li {
+    display: inline;
+    padding: 1em; }
+    /* line 31, ../sass/screen.scss */
+    .pagenav ul li a {
+      text-decoration: none; }
+
+/* line 38, ../sass/screen.scss */
+footer {
+  padding: 1em;
+  background-color: lightgrey; }
+
+/* line 47, ../sass/screen.scss */
+.page {
+  *zoom: 1;
+  max-width: 59em;
+  _width: 59em;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1em;
+  padding-right: 1em; }
+  /* line 38, ../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+  .page:after {
+    content: "";
+    display: table;
+    clear: both; }
+  @media (min-width: 61em) {
+    /* line 47, ../sass/screen.scss */
+    .page {
+      max-width: 59em; } }
+
+@media (min-width: 61em) {
+  /* line 54, ../sass/screen.scss */
+  header {
+    clear: both; }
+
+  /* line 55, ../sass/screen.scss */
+  .logo {
+    width: 15.25424%;
+    float: left;
+    margin-right: 1.69492%; }
+
+  /* line 56, ../sass/screen.scss */
+  .pagenav {
+    width: 83.05085%;
+    float: right;
+    margin-right: 0; }
+
+  /* line 57, ../sass/screen.scss */
+  .banner {
+    width: 100%;
+    float: right;
+    margin-right: 0; }
+
+  /* line 58, ../sass/screen.scss */
+  .main {
+    width: 100%;
+    float: right;
+    margin-right: 0; }
+    /* line 61, ../sass/screen.scss */
+    .main .content {
+      width: 100%;
+      float: right;
+      margin-right: 0; }
+    /* line 62, ../sass/screen.scss */
+    .main .summary {
+      width: 23.72881%;
+      float: right;
+      margin-right: 0; }
+
+  /* line 64, ../sass/screen.scss */
+  footer {
+    clear: both; } }
+/* line 67, ../sass/screen.scss */
+.contentinfo {
+  clear: both;
+  margin: 0 -1em;
+  padding: 0 1em; }
+  @media (min-width: 61em) {
+    /* line 67, ../sass/screen.scss */
+    .contentinfo {
+      margin: 0;
+      padding-left: 16.94915%;
+      padding-right: 25.42373%; } }
