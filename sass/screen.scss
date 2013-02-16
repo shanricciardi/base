@@ -17,15 +17,17 @@ $media-layout: 60em; // 16px*60em = 960px
 // ----------------------------------------------
 body {
 	font-size: 16px;
-	font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+	font-family: Verdana, Geneva, sans-serif;
 }
-h1 {font-size: 2em}
-header{ padding:$grid-padding 0;}
+h1 {font-size: 1.625em}
+p { font-size: 0.875em; line-height: 1.509375em;}
+header{ padding:$grid-padding * 2 0;}
 .pagenav {
 	ul {
-		margin-top: .5em;
+		margin: 1em 0;
 		float: right;
 		li {
+		font-size: 1.125em;
 		display: inline;
 		padding: 1em;
 			a {
@@ -51,8 +53,8 @@ footer {
 
 @include at-breakpoint($break) {
 	header {clear: both;}
-	.logo{@include span-columns(2,$break);}
-	.pagenav { @include span-columns(10 omega,$break); }
+	.logo{@include span-columns(3,$break);}
+	.pagenav { @include span-columns(9 omega,$break); }
 	.banner { @include span-columns(12 omega,$break); }
 	.main {
 		$main-columns: 12;
@@ -66,6 +68,6 @@ footer {
 
 footer{
 	clear: both;
-	margin: 0 0 - $grid-padding;
+	// margin: 0 0 - $grid-padding;
 	padding:  $grid-padding; 
 }
