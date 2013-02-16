@@ -21,6 +21,8 @@ body {
 }
 h1 {font-size: 1.625em}
 p { font-size: 0.875em; line-height: 1.509375em;}
+.sidebar p { font-size: 0.75em; line-height: 1.7em;}
+
 a {
 	text-decoration: none;
 	color:dimgrey;
@@ -28,7 +30,10 @@ a {
 		color:red;
 	}
 }
-address{ font-size: 0.875em;line-height: 1.509375em;color: dimgrey; }
+img {padding:.5em;}
+.flr{float: right;}
+.fll{float: left;}
+address{ font-size: 0.75em;line-height: 1.509375em;color: dimgrey; }
 header{ padding:$grid-padding * 2 0;}
 .pagenav {
 	ul {
@@ -37,9 +42,10 @@ header{ padding:$grid-padding * 2 0;}
 		li {
 		font-size: 1.125em;
 		display: inline;
-		padding: 1em;
+		// padding: 1em;
 			a {
 			text-decoration: none;
+			@include sassy-button("matte", 5px, 14px, #888888, #696969, #fff, "inset");
 			}
 		} //end li
 	}// end ul
