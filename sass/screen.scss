@@ -21,6 +21,13 @@ body {
 }
 h1 {font-size: 1.625em}
 p { font-size: 0.875em; line-height: 1.509375em;}
+a {
+	text-decoration: none;
+	color:dimgrey;
+	&:hover{
+		color:red;
+	}
+}
 header{ padding:$grid-padding * 2 0;}
 .pagenav {
 	ul {
