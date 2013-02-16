@@ -20,7 +20,7 @@ body {
 	font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
 }
 h1 {font-size: 2em}
-
+header{ padding:$grid-padding 0;}
 .pagenav {
 	ul {
 		margin-top: .5em;
@@ -36,7 +36,6 @@ h1 {font-size: 2em}
 }// end .pagenav 
 
 footer { 
-	padding:1em;
 	background-color: lightgrey;
 }
 
@@ -58,18 +57,15 @@ footer {
 	.main {
 		$main-columns: 12;
 		@include span-columns($main-columns omega, $break);
-		.content { @include span-columns(12 omega,$main-columns) }
+		.content { @include span-columns(12 omega,$main-columns);
+	padding: $grid-padding 0;
+	 }
 		.summary { @include span-columns(3 omega, $main-columns) }
 	}
-	footer{clear: both;}
 }
 
-.contentinfo {
+footer{
 	clear: both;
 	margin: 0 0 - $grid-padding;
-	padding: 0 $grid-padding;
-	@include at-breakpoint($break) {
-		margin: 0;
-		@include pad(2,3,$break);
-	}
+	padding:  $grid-padding; 
 }
